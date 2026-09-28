@@ -1,0 +1,26 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Paleta de cores */
+:root {
+  /* Fundos */
+  --cor-fundo: #24272D;
+  --cor-superficie: #30343B;
+  --cor-superficie-alternativa: #3A3F47;
+
+  /* Marca e ações */
+  --cor-destaque: #22D34B;
+  --cor-destaque-hover: #19B83E;
+  --cor-texto-botao: #102014;
+
+  /* Textos */
+  --cor-texto: #F5F6F7;
+  --cor-texto-secundario: #C2C6CC;
+
+  /* Bordas e foco */
+  --cor-borda: #4B515A;
+  --cor-foco: #8AF59F;
+}
