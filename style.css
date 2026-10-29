@@ -24,3 +24,44 @@
   --cor-borda: #4B515A;
   --cor-foco: #8AF59F;
 }
+
+header{
+  background-color: #2A2D34;
+}
+
+/* Logo na header do site */
+.logo{
+  width: 200px;
+  height: auto;
+}
+
+.container-nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-nav ul{
+  display: flex;
+  flex-direction: row;
+  margin-right: 8rem;
+  gap: 8rem;
+  justify-content: space-evenly;
+}
+
+nav ul{
+  /* Remover as "bolinhas" da lista */
+  list-style-type: none;
+}
+
+nav ul li a,
+nav ul li a:visited{
+  color: #5E656F;
+  text-decoration: none;
+  font-size: 200%;
+}
+
+nav ul li a:hover{
+  color: #8D949A;
+}
