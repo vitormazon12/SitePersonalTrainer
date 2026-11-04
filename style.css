@@ -40,9 +40,19 @@ header{
   background-color: #2A2D34;
 }
 
+/* FOOTER */
+footer{
+  background-color: #2A2D34;
+  display: flex;
+  flex: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 150px;
+}
+
 /* Logo na header do site */
 .logo{
-  width: 200px;
+  width: 150px;
   height: auto;
 }
 
