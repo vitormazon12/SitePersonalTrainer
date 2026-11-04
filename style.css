@@ -26,6 +26,9 @@
 
   /* Fonte principal */
   --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* Largura para ajuste dos cards */
+  --celular-width: 600px;
 }
 
 body {
@@ -56,7 +59,7 @@ footer{
   height: auto;
 }
 
-.container-nav{
+ .container-nav{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -102,14 +105,18 @@ main{
   padding: 1rem;
   border-radius: 8px;
   background-color: var(--cor-superficie);
-  border: 1px solid var(--cor-destaque);
+  border: 0.5px solid var(--cor-destaque);
+  margin: auto;
+  width: 95%;
 }
 
 /* SEÇÃO SOBRE */
 .sobre{
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 8px;
   background-color: var(--cor-superficie);
+  width: 95%;
+  margin: auto;
 }
 
 .sobre h2{
@@ -127,27 +134,59 @@ main{
   margin-left: 2rem;
 }
 
+@media screen and (max-width: 800px) {
+    .lista-sobre {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre{
+      align-items: center;
+      justify-content: space-evenly;
+    }
+}
+
 /* SEÇÃO DIFERENCIAIS */
 .container-diferenciais{
   display: grid;
   grid-template-areas: "card-dif" "card-dif" "card-dif";
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
+  width: 95%;
+  margin: auto;
+}
+
+@media screen and (max-width: 800px) {
+    .container-diferenciais {
+        grid-template-columns: 1fr;
+        width: 95%;
+        margin: auto;
+    }
 }
 
 .card-diferenciais {
   padding: 1.5rem;
   border-radius: 8px;
-  border-top: 1px solid var(--cor-destaque);
+  border-top: 2px solid var(--cor-destaque);
 
   grid-area: "card-dif";
   display: flex;
   flex-direction: column;
   background-color: var(--cor-superficie);
   align-items: center;
+  text-align: center;
+}
+
+.secao-sobre h3,
+.secao-diferenciais h3{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 0.4rem;
+  padding-top: 0.4rem;
+  border-top: 2px solid var(--cor-superficie-alternativa);
 }
 
 .card-diferenciais h3{
+  border-top: none;
   margin-bottom: 0.4rem;
   color: var(--cor-foco);
 }
