@@ -101,7 +101,20 @@ main{
 }
 
 /* SEÇÃO INICIO */
+
+.foto {
+    width: 180px;
+    height: 180px;
+    object-fit: cover; /* Esse comando serve para ajustar a foto e não cortar as bordas */
+    border-radius: 100px; /* Faz a foto cortar redondamente */
+    border: 1px solid var(--cor-foco);
+}
+
 .card-inicio {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+
   padding: 1rem;
   border-radius: 8px;
   background-color: var(--cor-superficie);
@@ -109,9 +122,22 @@ main{
   margin: auto;
   width: 95%;
 }
+@media screen and (max-width: 800px) {
+  .card-inicio {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  .foto{
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+  }
+}
 
 /* SEÇÃO SOBRE */
-.sobre{
+.card-sobre{
   padding: 1rem;
   border-radius: 8px;
   background-color: var(--cor-superficie);
@@ -119,27 +145,24 @@ main{
   margin: auto;
 }
 
-.sobre h2{
-  color: var(--cor-texto-secundario);
-}
-
 .lista-sobre{
   display: grid;
-  grid-template-areas: "lista" "lista";
+  grid-template-areas: "lista lista";
   grid-template-columns: 1fr 1fr;
 }
 
-.sobre li{
-  grid-area: "lista";
+.lista-sobre li{
+  grid-area: lista;
   margin-left: 2rem;
 }
 
 @media screen and (max-width: 800px) {
     .lista-sobre {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
     }
 
-    .sobre{
+    .card-sobre{
       align-items: center;
       justify-content: space-evenly;
     }
@@ -147,9 +170,8 @@ main{
 
 /* SEÇÃO DIFERENCIAIS */
 .container-diferenciais{
-  display: grid;
-  grid-template-areas: "card-dif" "card-dif" "card-dif";
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: row;
   gap: 1rem;
   width: 95%;
   margin: auto;
@@ -157,9 +179,10 @@ main{
 
 @media screen and (max-width: 800px) {
     .container-diferenciais {
-        grid-template-columns: 1fr;
-        width: 95%;
-        margin: auto;
+      display: flex;
+      flex-direction: column;
+      width: 95%;
+      margin: auto;
     }
 }
 
@@ -168,9 +191,6 @@ main{
   border-radius: 8px;
   border-top: 2px solid var(--cor-destaque);
 
-  grid-area: "card-dif";
-  display: flex;
-  flex-direction: column;
   background-color: var(--cor-superficie);
   align-items: center;
   text-align: center;
