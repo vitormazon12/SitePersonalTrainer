@@ -54,6 +54,14 @@ footer{
   height: 150px;
 }
 
+/* FOOTER-CONTATOS */
+
+.contato{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
 /* Logo na header do site */
 .logo{
   width: 150px;
