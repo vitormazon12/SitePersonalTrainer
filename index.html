@@ -13,40 +13,101 @@
                 <img src="Imagens/LogoFilipiPersonal.jpeg" alt="LogoFilipiPersonal" class="logo">
                 <nav id="nav-principal" class="nav">
                     <!-- Adicione aqui os elementos do menu de navegação -->
-                     <ul>
-                        <li><a href="#inicio">Início</a></li>
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#diferenciais">Diferenciais</a></li>
-                        <li><a href="#horario">Horários</a></li>
-                        <li><a href="#contato">Contatos</a></li>
-                     </ul>
+                     <ul id="lista-menu">
+                            <li><a href="#inicio">Início</a></li>
+                            <li><a href="#sobre">Sobre</a></li>
+                            <li><a href="#diferenciais">Diferenciais</a></li>
+                            <li><a href="#horario">Informações</a></li>
+                    </ul> 
+                    <input type="checkbox" id="checkbox-menu">
+                     <label for="checkbox-menu" id="checkbox-label">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                     </label>
                 </nav>
             </div>
         </header>
         
         <main id="main" class="main">
-            <section id="inicio" class="inicio">
-                <!-- Adicione aqui o conteúdo da seção de início -->
+            <section id="inicio" class="card-inicio">
+                <section id="foto" class="card-foto">
+                    <img src="Imagens/foto.jpeg" alt="Foto de Filipi Souza" class="foto">
+                </section>
+                
+                <section id="inicio" class="card-info">
+                    <h2>Filipi Souza Personal Trainer</h2>
+                    <p>
+                        <b>CREF: 162433-G</b>
+                    </p>
+                    <h4>
+                        <i>Atendimento exclusivo focado em resultados reais, respeitando seus limites.</i>
+                    </h4>
+                    <p>
+                        Especialista em recuperação física e qualidade de vida, Filipi Souza atua há anos na cidade de Limeira transformando a relação das pessoas com os exercícios. Com ampla prática e vivência no atendimento de adultos com mais de 40 anos, seu método de ensino vai muito além do treino básico.
+                    </p>
+                </section>
             </section>
 
-            <section id="sobre" class="sobre">
-                <!-- Adicione aqui o conteúdo da seção sobre -->
+            <section id="sobre" class="secao-sobre">
+                <h3>Nossa Estrutura: O Espaço Ideal para o Seu Desenvolvimento</h3>
+                <div class="card-sobre">
+                    <p>
+                        Os atendimentos são realizados nas instalações do Estúdio Linea, um espaço de referência com 12 anos de história, localizado na região central de Limeira. O ambiente foi projetado para oferecer o máximo de conforto, segurança e privacidade durante os seus treinos.
+                    </p>
+                    <p>O que o nosso espaço oferece:</p>
+                    <div class="lista-sobre">
+                        <ul> <!-- Esse espaço pode ser alterado para cards ao invés de uma lista -->
+                            <li>Infraestrutura de Alta Qualidade: O estúdio conta com um ambiente amplo, espelhado e muito bem iluminado, além de piso emborrachado para garantir total estabilidade e segurança na execução dos exercícios.</li>
+                            <li>Equipamentos Modernos: A área de musculação é equipada com aparelhos de ponta (incluindo leg press, polias e halteres) e maquinário diversificado, permitindo a aplicação de treinos variados e adaptados à necessidade de cada aluno.</li>
+                        </ul>
+                        <ul>
+                            <li>Ambiente Reservado e Sem Superlotação: Focado na atenção exclusiva, o espaço foge do modelo de academias tradicionais lotadas. Com o limite máximo recomendado de dois alunos por horário, você tem a tranquilidade de usar os equipamentos sem filas ou distrações.</li>
+                            <li>Filosofia Integrada: Unindo Pilates e Musculação em um só lugar, a estrutura física apoia perfeitamente a nossa maior missão: libertar você das dores através do movimento, fortalecendo o corpo e treinando a mente.</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
-            <section id="diferenciais" class="diferenciais">
-                <!-- Adicione aqui o conteúdo da seção de diferenciais -->
-            </section>
+            <section id="diferenciais" class="secao-diferenciais">
+                <h3>Diferenciais</h3>
+                <div class="container-diferenciais">
+                    <article class="card-diferenciais">
+                        <h3>Atenção Exclusiva</h3>
+                        <p>
+                            O atendimento é feito em um ambiente reservado com aulas particulares para, no máximo, dois alunos simultâneos. Essa estrutura mantém o formato de treinamento verdadeiramente personalizado, garantindo cuidado integral e assistência constante para certificar a execução correta dos seus exercícios.
+                        </p>
+                    </article>
+                    <article class="card-diferenciais">
+                        <h3>Treino Sob Medida e Respeito aos Limites</h3>
+                        <p>
+                            As aulas começam com um interesse inicial e genuíno no seu objetivo. O acompanhamento é preparado e adaptado de acordo com as necessidades e limitações de cada aluno, sendo ideal para quem busca recuperação física, não se adapta a treinos generalizados ou procura maior qualidade de vida.
+                        </p>
+                    </article>
+                    <article class="card-diferenciais">
+                        <h3>Nova Relação com a Saúde</h3>
+                        <p>
+                            Focado especialmente em adultos que buscam qualidade de vida e resultados conscientes, o método de ensino vai além do treino voltado apenas para fortalecimento ou emagrecimento. Todo o processo prioriza o respeito ao aluno acima de tudo, demandando preparação prévia para oferecer exclusividade e transformar sua relação com os exercícios.
+                        </p>
+                    </article>
+                </div>
 
-            <section id="horario" class="horario">
-                <!-- Adicione aqui o conteúdo da seção de horário -->
-            </section>
-
-            <section id="contato" class="contato">
-                <!-- Adicione aqui o conteúdo da seção de contato -->
             </section>
         </main>
 
         <footer id="footer" class="footer">
+            
+            <section id="horario" class="horario">
+                <!-- Adicione aqui o conteúdo da seção de horário -->
+                <h3>Horários</h3> 
+                <p>Segunda à sexta das 5h às 20h</p>
+                <p>Sábados das 6h às 12h.</p>
+            </section>
+
+            <section id="contato" class="contato">
+                <!-- Adicione aqui o conteúdo da seção de contato -->
+                <a href="https://www.instagram.com/filipisouzapersonal/" target="_blank"><img src="Imagens/LogoInstagram.png" height="40px" width="auto"></a>  
+            </section>
 
         </footer>
         
