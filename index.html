@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Filipi Souza Personal Trainer</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
     
@@ -58,15 +59,99 @@
                         Os atendimentos são realizados nas instalações do Estúdio Linea, um espaço de referência com 12 anos de história, localizado na região central de Limeira. O ambiente foi projetado para oferecer o máximo de conforto, segurança e privacidade durante os seus treinos.
                     </p>
                     <p>O que o nosso espaço oferece:</p>
-                    <div class="lista-sobre">
-                        <ul> <!-- Esse espaço pode ser alterado para cards ao invés de uma lista -->
-                            <li>Infraestrutura de Alta Qualidade: O estúdio conta com um ambiente amplo, espelhado e muito bem iluminado, além de piso emborrachado para garantir total estabilidade e segurança na execução dos exercícios.</li>
-                            <li>Equipamentos Modernos: A área de musculação é equipada com aparelhos de ponta (incluindo leg press, polias e halteres) e maquinário diversificado, permitindo a aplicação de treinos variados e adaptados à necessidade de cada aluno.</li>
-                        </ul>
-                        <ul>
-                            <li>Ambiente Reservado e Sem Superlotação: Focado na atenção exclusiva, o espaço foge do modelo de academias tradicionais lotadas. Com o limite máximo recomendado de dois alunos por horário, você tem a tranquilidade de usar os equipamentos sem filas ou distrações.</li>
-                            <li>Filosofia Integrada: Unindo Pilates e Musculação em um só lugar, a estrutura física apoia perfeitamente a nossa maior missão: libertar você das dores através do movimento, fortalecendo o corpo e treinando a mente.</li>
-                        </ul>
+
+                      <div class="lista-sobre">
+                       
+                        <div id="meuCarrossel" class="carousel slide" data-bs-ride="carousel">
+                            
+                            <!-- Indicadores (bolinhas na parte inferior) -->
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#meuCarrossel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#meuCarrossel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#meuCarrossel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#meuCarrossel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            </div>
+
+                            <!-- Itens do Carrossel (Imagens e Legendas) -->
+                            <div class="carousel-inner">
+                                
+                                <div class="carousel-item active">
+                                    <img src="Imagens/foto1.jpeg" class="d-block w-100" alt="Infraestrutura de Alta Qualidade">
+                                    
+                                    <!-- Legenda Mobile -->
+                                    <div class="carousel-caption d-block d-md-none p-2">
+                                        <h6 class="mb-0">Infraestrutura de Alta Qualidade</h6>
+                                    </div>                                    
+                                    <!-- Legenda Desktop -->
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Infraestrutura de Alta Qualidade</h5>
+                                        <p>
+                                        O estúdio conta com um ambiente amplo, espelhado e muito bem iluminado, além de piso emborrachado para garantir total estabilidade e segurança na execução dos exercícios.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                    <div class="carousel-item">
+                                    <img src="Imagens/foto2.jpeg" class="d-block w-100" alt="Equipamentos Modernos">
+                                    
+                                    <!-- Legenda Mobile -->
+                                    <div class="carousel-caption d-block d-md-none p-2">
+                                        <h6 class="mb-0">Equipamentos Modernos</h6>
+                                    </div>                                    
+                                    <!-- Legenda Desktop -->
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Equipamentos Modernos</h5>
+                                        <p>
+                                        A área de musculação é equipada com aparelhos de ponta (incluindo leg press, polias e halteres) e maquinário diversificado, permitindo a aplicação de treinos variados e adaptados à necessidade de cada aluno.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="carousel-item">
+                                    <img src="Imagens/foto3.jpeg" class="d-block w-100" alt="Ambiente Reservado e Sem Superlotação">
+                                    
+                                    <!-- Legenda Mobile -->
+                                    <div class="carousel-caption d-block d-md-none p-2">
+                                        <h6 class="mb-0">Ambiente Reservado e Sem Superlotação</h6>
+                                    </div>                                    
+                                    <!-- Legenda Desktop -->
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Ambiente Reservado e Sem Superlotação</h5>
+                                        <p>
+                                        Focado na atenção exclusiva, o espaço foge do modelo de academias tradicionais lotadas. Com o limite máximo recomendado de dois alunos por horário, você tem a tranquilidade de usar os equipamentos sem filas ou distrações.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="carousel-item">
+                                    <img src="Imagens/foto4.jpeg" class="d-block w-100" alt="Filosofia Integrada">
+                                    
+                                    <!-- Legenda Mobile -->
+                                    <div class="carousel-caption d-block d-md-none p-2">
+                                        <h6 class="mb-0">Filosofia Integrada</h6>
+                                    </div>                                    
+                                    <!-- Legenda Desktop -->
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Filosofia Integrada</h5>
+                                        <p>
+                                        Unindo Pilates e Musculação em um só lugar, a estrutura física apoia perfeitamente a nossa maior missão: libertar você das dores através do movimento, fortalecendo o corpo e treinando a mente.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Botões de Navegação (Anterior / Próximo) -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#meuCarrossel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+
+                            <button class="carousel-control-next" type="button" data-bs-target="#meuCarrossel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Próximo</span>
+                            </button>
+
+                        </div>                        
                     </div>
                 </div>
             </section>

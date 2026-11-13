@@ -220,28 +220,12 @@ main{
   margin: auto;
 }
 
-.lista-sobre{
-  display: grid;
-  grid-template-areas: "lista lista";
-  grid-template-columns: 1fr 1fr;
-}
-
-.lista-sobre li{
-  grid-area: lista;
-  margin-left: 2rem;
-}
-
-@media screen and (max-width: 800px) {
-    .lista-sobre {
-        display: flex;
-        flex-direction: column;
-    }
-
+/* @media screen and (max-width: 800px) {
     .card-sobre{
       align-items: center;
       justify-content: space-evenly;
     }
-}
+} */
 
 /* SEÇÃO DIFERENCIAIS */
 .container-diferenciais{
@@ -284,4 +268,52 @@ main{
   border-top: none;
   margin-bottom: 0.4rem;
   color: var(--cor-foco);
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo preto semi-transparente */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Estilo padrão para computadores */
+.carousel-caption h5 {
+  font-size: 1.5rem;
+}
+.carousel-caption p {
+  font-size: 1rem;
+}
+
+/* Ajuste automático para celulares (telas menores que 768px) */
+@media (max-width: 767.98px) {
+  .carousel-caption {
+    padding: 10px; /* Reduz o espaço interno da legenda */
+    bottom: 10px;  /* Cola mais embaixo para não tampar a foto */
+  }
+}
+
+.carousel-item img {
+  height: 250px;       /* Altura fixa para celulares */
+  object-fit: cover;   /* Garante que a imagem preencha o espaço sem distorcer */
+}
+
+@media (min-width: 768px) {
+  .carousel-item img {
+    height: 450px;   /* Altura maior para computadores */
+  }
+}
+
+/* Empurra as bolinhas indicadores mais para baixo */
+.carousel-indicators {
+  bottom: -20px; /* Joga as bolinhas próximo da borda do carrossel */
+}
+
+/* Deixa os botões indicadores visíveis caso fiquem fora do fundo escuro */
+.carousel-indicators [data-bs-target] {
+  background-color: var(--cor-destaque); /* Cor destaque para as bolinhas */
+}
+
+/* Ajusta a posição da legenda para ficar mais centralizada/acima */
+.carousel-caption {
+  bottom: 40px; /* Sobe a legenda para dar espaço às bolinhas */
 }
