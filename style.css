@@ -169,10 +169,12 @@ nav ul li a:hover{
 main{
   max-width: 1500px;
   margin: 1.5rem auto;
-  padding: 0rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 
 /* SEÇÃO INICIO */
@@ -195,9 +197,11 @@ main{
   background-color: var(--cor-superficie);
   border: 0.5px solid var(--cor-destaque);
   margin: auto;
-  width: 95%;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
+  main{
+    margin: auto;
+  }
   .card-inicio {
     display: flex;
     flex-direction: column;
@@ -214,9 +218,6 @@ main{
 /* SEÇÃO SOBRE */
 .card-sobre{
   padding: 1rem;
-  border-radius: 8px;
-  background-color: var(--cor-superficie);
-  width: 95%;
   margin: auto;
 }
 
@@ -232,11 +233,10 @@ main{
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  width: 95%;
   margin: auto;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .container-diferenciais {
       display: flex;
       flex-direction: column;
@@ -271,7 +271,7 @@ main{
 }
 
 .carousel-caption {
-  background-color: rgba(0, 0, 0, 0.6); /* Fundo preto semi-transparente */
+  background-color: rgba(0, 0, 0, 0.65); /* Fundo preto semi-transparente */
   padding: 20px;
   border-radius: 8px;
 }
