@@ -8,7 +8,7 @@
 :root {
   /* Fundos */
   --cor-fundo: #24272D;
-  --cor-superficie: #30343B;
+  --cor-superficie: #2A2D34;
   --cor-superficie-alternativa: #3A3F47;
 
   /* Marca e ações */
@@ -26,9 +26,6 @@
 
   /* Fonte principal */
   --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-  /* Largura para ajuste dos cards */
-  --celular-width: 600px;
 }
 
 body {
@@ -169,8 +166,7 @@ nav ul li a:hover{
 main{
   max-width: 1500px;
   margin: 1.5rem auto;
-  margin-left: 10rem;
-  margin-right: 10rem;
+  width: 75%;
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -246,13 +242,14 @@ main{
 }
 
 .card-diferenciais {
+  display: flex;
+  flex-direction: column;
   padding: 1.5rem;
   border-radius: 8px;
   border-top: 2px solid var(--cor-destaque);
 
   background-color: var(--cor-superficie);
-  align-items: center;
-  text-align: center;
+  justify-content: space-around;
 }
 
 .secao-sobre h3,
@@ -267,6 +264,7 @@ main{
 .card-diferenciais h3{
   border-top: none;
   margin-bottom: 0.4rem;
+  text-align: center;
   color: var(--cor-foco);
 }
 
