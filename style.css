@@ -249,6 +249,19 @@ main{
   border-top: 2px solid var(--cor-superficie-alternativa);
 }
 
+.localidade {
+  width: 100%;
+  max-width: 400px; /* Diminui a largura máxima do mapa (ajuste conforme desejar) */
+  margin: 20px auto; /* Centraliza o mapa na tela */
+}
+
+.mapa-localidade {
+  width: 100%;     /* Faz o mapa ocupar 100% dos 400px do container */
+  height: 250px;   /* Diminui a altura do mapa (ex: de 450px para 250px) */
+  border-radius: 8px; /* Opcional: arredonda as bordas para combinar com os cards */
+  display: block;
+}
+
 .carousel-caption {
   background-color: rgba(0, 0, 0, 0.65); /* Fundo preto semi-transparente */
   padding: 20px;
