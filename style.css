@@ -93,11 +93,9 @@ footer{
   margin-right: 2rem;
 }
 
-
-
 #lista-menu {
   display: flex;
-  gap: 10rem;
+  gap: 5rem;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
@@ -112,10 +110,15 @@ nav ul li a:visited{
   color: #5E656F;
   text-decoration: none;
   font-size: 100%;
+  padding: 9px;
 }
 
 nav ul li a:hover{
-  color: #19B83E;
+  color: var(--cor-texto-botao);
+  background-color: var(--cor-destaque-hover);
+  padding: 9px;
+  border-radius: 3px ;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 900px) {
@@ -148,34 +151,48 @@ main{
 
 /* SEÇÃO INICIO */
 
+.secao-inicio {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: auto;
+  border-radius: 8px;
+  background-color: var(--cor-superficie);
+  padding: 0.5rem;
+}
+
 .foto {
-    width: 180px;
-    height: 180px;
+    width: 280px;
+    height: 280px;
     object-fit: cover; /* Esse comando serve para ajustar a foto e não cortar as bordas */
     border-radius: 100px; /* Faz a foto cortar redondamente */
-    border: 1px solid var(--cor-foco);
 }
 
 .card-inicio {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 3rem;
 
   padding: 1rem;
-  border-radius: 8px;
-  background-color: var(--cor-superficie);
-  border: 0.5px solid var(--cor-destaque);
+
   margin: auto;
+  align-items: center;
 }
+
 @media screen and (max-width: 900px) {
   main{
     margin: auto;
+    margin-left: auto;   /* Garante que centraliza no Chrome */
+    margin-right:  auto;  /* Garante que centraliza no Chrome */
+
   }
   .card-inicio {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     align-items: center;
+    width: 100%;
+    max-width: 100%;
   }
   .foto{
     width: 300px;
@@ -184,9 +201,13 @@ main{
   }
 }
 
+#destaque {
+  color: var(--cor-destaque);
+  font-weight: 500;
+}
+
 /* SEÇÃO SOBRE */
 .card-sobre{
-  padding: 1rem;
   margin: auto;
 }
 
@@ -227,8 +248,6 @@ main{
 
 .secao-sobre h3,
 .secao-diferenciais h3{
-  margin-left: 1rem;
-  margin-right: 1rem;
   margin-bottom: 0.4rem;
   padding-top: 0.4rem;
   border-top: 2px solid var(--cor-superficie-alternativa);
@@ -264,7 +283,7 @@ main{
 
 .carousel-caption {
   background-color: rgba(0, 0, 0, 0.65); /* Fundo preto semi-transparente */
-  padding: 20px;
+  padding: 10px;
   border-radius: 8px;
 }
 
@@ -307,5 +326,5 @@ main{
 
 /* Ajusta a posição da legenda para ficar mais centralizada/acima */
 .carousel-caption {
-  bottom: 40px; /* Sobe a legenda para dar espaço às bolinhas */
+  bottom: 1px; /* Sobe a legenda para dar espaço às bolinhas */
 }
