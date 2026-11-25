@@ -44,17 +44,23 @@ header{
 /* FOOTER */
 footer{
   background-color: #2A2D34;
-  display: grid;
-  grid-template-columns: 1 fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: 
-  "localidade localidade"
-  "horario contato";
+  display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: auto;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+  footer{
+    display: grid;
+    padding-top: 1rem;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "horario horario"
+    "contato contato";
+    justify-content: center;
+  }
 }
 
 .horario{
@@ -114,11 +120,7 @@ nav ul li a:visited{
 }
 
 nav ul li a:hover{
-  color: var(--cor-texto-botao);
-  background-color: var(--cor-destaque-hover);
-  
-  border-radius: 4px ;
-  font-weight: 500;
+  color: var(--cor-destaque-hover);
 }
 
 @media screen and (max-width: 900px) {
@@ -134,8 +136,10 @@ nav ul li a:hover{
     padding-bottom:1rem;
   }
   #lista-menu{
-    gap: 2rem;
-    justify-content: space-between;
+    padding: 0;
+    gap: 20px;
+    font-size: 80%;
+    justify-content: center;
   }
 }
 
@@ -159,6 +163,13 @@ main{
   margin: auto;
   border-radius: 8px;
   background-color: var(--cor-superficie);
+}
+
+.card-info{
+  padding: 1.5rem;
+}
+
+.card-textoinicio{
   padding: 1.5rem;
 }
 
@@ -173,9 +184,7 @@ main{
   display: flex;
   flex-direction: row;
   gap: 3rem;
-
-  padding: 1rem;
-
+  padding-top: 1rem;
   margin: auto;
   align-items: center;
 }
@@ -198,8 +207,8 @@ main{
     margin-right: auto; /* Garante que centraliza no Chrome */
   }
   .foto{
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border-radius: 300px;
   }
 }
