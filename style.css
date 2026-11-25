@@ -169,8 +169,8 @@ main{
 }
 
 .foto {
-    width: 280px;
-    height: 280px;
+    width: 200px;
+    height: 200px;
     object-fit: cover; /* Esse comando serve para ajustar a foto e não cortar as bordas */
     border-radius: 100px; /* Faz a foto cortar redondamente */
 }
