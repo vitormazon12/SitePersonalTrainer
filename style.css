@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* Paleta de cores */
@@ -25,16 +26,21 @@
   --cor-foco: #8AF59F;
 
   /* Fonte principal */
-  --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --fonte-titulo: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  --fonte-principal: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body {
-    font-family: var(--fonte-principal);
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    line-height: 1.6;
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
 }
 
+h1, h2, h3 {
+    font-family: var(--fonte-titulo);
+    letter-spacing: -0.02em;
+}
 /* HEADER */
 header{
   background-color: #2A2D34;
@@ -44,23 +50,17 @@ header{
 /* FOOTER */
 footer{
   background-color: #2A2D34;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1 fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "localidade localidade"
+  "horario contato";
   justify-content: space-around;
   align-items: center;
-}
-
-@media screen and (max-width: 900px) {
-  footer{
-    display: grid;
-    padding-top: 1rem;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "horario horario"
-    "contato contato";
-    justify-content: center;
-  }
+  height: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .horario{
@@ -120,7 +120,11 @@ nav ul li a:visited{
 }
 
 nav ul li a:hover{
-  color: var(--cor-destaque-hover);
+  color: var(--cor-texto-botao);
+  background-color: var(--cor-destaque-hover);
+  
+  border-radius: 4px ;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 900px) {
@@ -136,10 +140,8 @@ nav ul li a:hover{
     padding-bottom:1rem;
   }
   #lista-menu{
-    padding: 0;
-    gap: 20px;
-    font-size: 80%;
-    justify-content: center;
+    gap: 2rem;
+    justify-content: space-between;
   }
 }
 
@@ -163,13 +165,6 @@ main{
   margin: auto;
   border-radius: 8px;
   background-color: var(--cor-superficie);
-}
-
-.card-info{
-  padding: 1.5rem;
-}
-
-.card-textoinicio{
   padding: 1.5rem;
 }
 
@@ -184,7 +179,9 @@ main{
   display: flex;
   flex-direction: row;
   gap: 3rem;
-  padding-top: 1rem;
+
+  padding: 1rem;
+
   margin: auto;
   align-items: center;
 }
@@ -207,8 +204,8 @@ main{
     margin-right: auto; /* Garante que centraliza no Chrome */
   }
   .foto{
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 300px;
   }
 }
@@ -343,22 +340,22 @@ main{
 
 
 .whatsapp-float {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background-color: var(--cor-texto-botao);
-    /* color: #FFF; */
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    z-index: 1000;
-    transition: transform 0.3s ease;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: var(--cor-texto-botao);
+  /* color: #FFF; */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease;
 }
 .whatsapp-float:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
